@@ -18,7 +18,7 @@ public  class Hooks
 	 public  WebElement password_Field = driver.findElement(By.xpath("//input[contains(@name,'password')]"));
 	 public  WebElement login_Button = driver.findElement(By.xpath("//button[contains(text(),'Login')]"));
 	 
-	   @After
+	   @Before
 	   public void Setup()  
 	    {
 	        driver = new ChromeDriver();
@@ -34,18 +34,12 @@ public  class Hooks
 	        //Thread.sleep(5000);
 	    }
 
-        @Before
+        @After
 	    public void TearDown()
 	    {
 	        driver.close();
 
 	    }
-	 
-	 
-	 
-	 
-
-	
 }
 
 
